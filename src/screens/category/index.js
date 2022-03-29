@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,Button} from 'react-native';
+import {View,Text,Button,ScrollView,Image} from 'react-native';
 import {styles} from './styles';
 
 
@@ -7,18 +7,21 @@ import {styles} from './styles';
 const Category = ({navigation}) => {
 
     return(
-        <View style={styles.container}> 
-        
-            <Text style={styles.title}>Categorias</Text> 
-            <Button title="Ir a Productos" onPress={() => {
+        <ScrollView style={styles.container}>
+            <View style={styles.categoriasContainer}>
+            <Text style={styles.title}>Facturas</Text>
+            <Image style={styles.image} source={require('../../../assets/images/FacturasCategoria.jpg')} />
+            
+
+            <Button title="Ir a Facturas" onPress={() => {
                 navigation.navigate('Product')
             }} />
-    
-    
-           
-                
-            
-        </View>
+
+            </View>
+
+
+
+    </ScrollView>
     
         )
 }

@@ -1,26 +1,30 @@
 import React from 'react';
-import {View,Text,Button} from 'react-native';
-import {styles} from './styles';
+import { View, Text, Button, Image,ScrollView } from 'react-native';
+import { styles } from './styles';
 
 
 
-const Product = ({navigation}) => {
+const Product = ({ navigation }) => {
 
-    return(
-        <View style={styles.container}> 
-        
-            <Text style={styles.title}>Productos</Text> 
+    return (
+        <ScrollView style={styles.container}>
+            <View style={styles.productosContainer}>
+            <Text style={styles.title}>Dulce de Leche</Text>
+            <Image style={styles.image} source={require('../../../assets/images/FacturaDDL.jpg')} />
+            <Text style={styles.title}>Membrillo</Text>
+            <Image style={styles.image} source={require('../../../assets/images/FacturaMembrillo.jpg')} />
+
             <Button title="Ir al Inicio" onPress={() => {
                 navigation.navigate('Home')
             }} />
-    
-    
-           
-                
-            
-        </View>
-    
-        )
+
+            </View>
+
+
+
+    </ScrollView>
+
+    )
 }
 
 

@@ -1,18 +1,30 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        justifyContent:'center',
-        alignItems:'center',
+
     },
 
-    title:{
-        fontSize:20,
-        fontWeight:'bold',
-        textAlign:'center',
-        marginVertical:20,
-    }
+    productosContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    title: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginVertical: 10,
+    },
+
+    image: {
+        width: '70%',
+        height: 150,
+        marginVertical: 10,
+    },
+
 
 })
+

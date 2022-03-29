@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        flexGrow: 0.2,
+        flexGrow: 0.7,
         justifyContent:'center',
         alignItems:'center',
     },
@@ -19,9 +19,10 @@ export const styles = StyleSheet.create({
         color:'#c4c4c4',
     },
 
-    buttonContainer:{
-        marginVertical:20,
-        marginBottom:20,
-    }
+    image: {
+        width: '70%',
+        height: 150,
+        marginVertical: 10,
+    },
 
 })
