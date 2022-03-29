@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
 
     container: {
         flex: 1,
+        flexGrow: 0.2,
         justifyContent:'center',
         alignItems:'center',
     },
@@ -15,7 +16,12 @@ export const styles = StyleSheet.create({
         textAlign:'center',
         marginVertical:20,
         fontFamily:'OpenSans-Bold',
-        color:'#212121',
+        color:'#c4c4c4',
+    },
+
+    buttonContainer:{
+        marginVertical:20,
+        marginBottom:20,
     }
 
 })

@@ -1,20 +1,26 @@
 import React from 'react';
-import {View,Text} from 'react-native';
+import {View,Text,Button} from 'react-native';
 import {styles} from './styles';
 
 
 
-const Product = () => {
+const Product = ({navigation}) => {
 
     return(
-    <View style={styles.container}> 
+        <View style={styles.container}> 
+        
+            <Text style={styles.title}>Productos</Text> 
+            <Button title="Ir al Inicio" onPress={() => {
+                navigation.navigate('Home')
+            }} />
     
-        <Text style={styles.title}>Product</Text> 
     
+           
+                
+            
+        </View>
     
-    </View>
-
-    )
+        )
 }
 
 
