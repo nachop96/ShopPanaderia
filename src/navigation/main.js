@@ -32,11 +32,11 @@ const MainNavigator = () => {
              />
             <Stack.Screen name="Product" 
             component={Product} 
-            options={({ route }) => ({ title: route.params.title })} 
+            options={({ route }) => ({ title: route.params.name })}
             />
             <Stack.Screen name="Category" 
             component={Category} 
-            options={({ route }) => ({ title: route.params.title })}
+            options={({ route }) => ({ title: route.params.name })}
             />
         </Stack.Navigator>
     );

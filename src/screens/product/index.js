@@ -1,10 +1,9 @@
+import { Button, Image, ScrollView, Text, View } from 'react-native';
+
 import React from 'react';
-import { View, Text, Button, Image,ScrollView } from 'react-native';
 import { styles } from './styles';
 
-
-
-const Product = ({ navigation }) => {
+const Product = ({ navigation,route }) => {
 
     return (
         <ScrollView style={styles.container}>

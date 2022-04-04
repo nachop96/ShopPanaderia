@@ -1,28 +1,35 @@
-import {Button, Image, ScrollView, Text, View} from 'react-native';
+import {Button, FlatList, Image, ScrollView, Text, View} from 'react-native';
 
+import CategoryProducts from '../../components/molecules/categoryProducts';
+import { PRODUCTS } from '../../constants/products';
 import React from 'react';
 import {styles} from './styles';
 
-const Category = ({navigation}) => {
+const Category = ({navigation,route}) => {
 
-    return(
-        <ScrollView style={styles.container}>
-            <View style={styles.categoriasContainer}>
-            <Text style={styles.title}>Facturas</Text>
-            <Image style={styles.image} source={require('../../../assets/images/FacturasCategoria.jpg')} />
-            
+    const {id} = route.params
 
-            <Button title="Ir a Facturas" onPress={() => {
-                navigation.navigate('Product',{title:'Facturas'})
-            }} />
+    const selectedCategory = PRODUCTS.filter(product => product.category === id);
 
-            </View>
+    const handleSelectCategory = (product) => {
+        navigation.navigate('Product',{product, name: product.name})
+
+    }
+
+    const renderItem = ({item}) => <CategoryProducts item={item} onSelected={handleSelectCategory} />
 
 
+    return (
+    <View style={styles.container}>
+    <FlatList 
+    data={selectedCategory}
+    keyExtractor={(item) => item.id}
+    renderItem={renderItem}
+    />
+    </View>
 
-    </ScrollView>
-    
-        )
+
+    )
 }
 
 

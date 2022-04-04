@@ -17,10 +17,26 @@ export const styles = StyleSheet.create({
 
     },
     title: {
-        fontSize: 18,
+        fontSize: 16,
+        fontFamily: 'OpenSans-Regular',
+        color: colors.text,
+    },
+    price: {
+        fontSize: 20,
         fontFamily: 'OpenSans-Bold',
-        color: colors.textInverse,
-    }
+        color: colors.text,
+    },
+    details: {
+        flexDirection: 'column',
+        justifyContent:'center',
+        alignItems: 'center',
+    },
+    description: {
+        fontSize: 13,
+        fontFamily: 'OpenSans-Regular',
+        color: colors.text,
+    },
+
     
 
 

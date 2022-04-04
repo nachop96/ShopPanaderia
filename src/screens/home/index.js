@@ -8,7 +8,7 @@ import {styles} from './styles';
 const Home = ({navigation}) => {
 
     const handleSelectCategory = (category) => {
-        navigation.navigate('Category',{id: category.id, title: category.name})
+        navigation.navigate('Category',{id: category.id, name: category.name})
 
     }
 
