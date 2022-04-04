@@ -4,9 +4,7 @@ export const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        flexGrow: 0.7,
-        justifyContent:'center',
-        alignItems:'center',
+        
     },
 
     title:{
@@ -24,5 +22,7 @@ export const styles = StyleSheet.create({
         height: 150,
         marginVertical: 10,
     },
+
+
 
 })

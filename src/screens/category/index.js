@@ -1,8 +1,7 @@
+import {Button, Image, ScrollView, Text, View} from 'react-native';
+
 import React from 'react';
-import {View,Text,Button,ScrollView,Image} from 'react-native';
 import {styles} from './styles';
-
-
 
 const Category = ({navigation}) => {
 
@@ -14,7 +13,7 @@ const Category = ({navigation}) => {
             
 
             <Button title="Ir a Facturas" onPress={() => {
-                navigation.navigate('Product')
+                navigation.navigate('Product',{title:'Facturas'})
             }} />
 
             </View>

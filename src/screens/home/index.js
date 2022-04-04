@@ -1,25 +1,29 @@
+import {Button, FlatList, Image, Text, View} from 'react-native';
+
+import { CATEGORIES } from '../../constants/categories';
+import CategoryGrid from '../../components/molecules/categoryGrid';
 import React from 'react';
-import {View,Text,Button,Image} from 'react-native';
 import {styles} from './styles';
-
-
 
 const Home = ({navigation}) => {
 
-    return(
-    <View style={styles.container}> 
-    
-        <Text style={styles.title}>¡Panaderia Pedrosa!</Text> 
-        <Image style={styles.image} source={require('../../../assets/images/Panaderia.jpg')} />
-        <Button title="Ir a Categorias" onPress={() => {
-            navigation.navigate('Category')
-        }} />
+    const handleSelectCategory = (category) => {
+        navigation.navigate('Category',{id: category.id, title: category.name})
+
+    }
+
+    const renderItem = ({item}) => <CategoryGrid item={item} onSelected={handleSelectCategory} />
 
 
-       
-            
-        
+    return (
+    <View style={styles.container}>
+    <FlatList 
+    data={CATEGORIES}
+    keyExtractor={(item) => item.id}
+    renderItem={renderItem}
+    />
     </View>
+
 
     )
 }
