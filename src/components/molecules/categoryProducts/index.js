@@ -1,4 +1,4 @@
-import {Platform, Text, TouchableNativeFeedback, TouchableOpacity, View} from 'react-native';
+import {ImageBackground, Text, TouchableOpacity, View} from 'react-native';
 
 import React from 'react';
 import { styles } from './style';
@@ -7,6 +7,7 @@ const CategoryProducts = ({item,onSelected} ) => {
     
      return(
                 <View style={styles.container}>
+                <ImageBackground source={{uri: item.image}} style={styles.image}></ImageBackground> 
                 <TouchableOpacity
                 style={styles.touchable}
                 onPress={() => onSelected(item)}

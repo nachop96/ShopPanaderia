@@ -24,6 +24,12 @@ export const styles = StyleSheet.create({
         height: 150,
         marginVertical: 10,
     },
+    text: {
+        fontSize: 16,
+    },
+    buttonContainer: {
+        marginVertical: 20,
+    }
 
 
 })

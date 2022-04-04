@@ -7,7 +7,7 @@ const {width,height} = Dimensions.get('window');
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        height: height/5,
+        height: height/3.5,
         
     },
     touchable: {
@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
     },
     details: {
         flexDirection: 'column',
-        justifyContent:'center',
+        justifyContent:'space-between',
         alignItems: 'center',
     },
     description: {

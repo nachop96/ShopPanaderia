@@ -6,6 +6,7 @@ export const PRODUCTS = [
         name: 'Procesador 1',
         description: 'Procesador Alta gama',
         price: 80000,
+        image:'https://www.teclogia.com/wp-content/uploads/2019/05/procesador-intel-core-i7-10750h-10-6-ghz-8-gb-ddr4-16-gb-ssd-256-gb-ram-windows-10-pro-64-bits-2.jpg'
     },
     {   
         id: 2,
@@ -13,6 +14,7 @@ export const PRODUCTS = [
         name: 'Procesador 2',
         description: 'Procesador Media gama',
         price: 40000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 3,
@@ -20,6 +22,7 @@ export const PRODUCTS = [
         name: 'Procesador 3',
         description: 'Procesador baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 4,
@@ -27,6 +30,7 @@ export const PRODUCTS = [
         name: 'Placa de video 1',
         description: 'Placa de video alta gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 5,
@@ -34,6 +38,7 @@ export const PRODUCTS = [
         name: 'Placa de video 2',
         description: 'Placa de video media gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 6,
@@ -41,6 +46,7 @@ export const PRODUCTS = [
         name: 'Placa de video 3',
         description: 'Placa de video baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 7,
@@ -48,6 +54,7 @@ export const PRODUCTS = [
         name: 'Memoria Ram 1',
         description: 'Ram alta gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 8,
@@ -55,6 +62,7 @@ export const PRODUCTS = [
         name: 'Memoria Ram 2',
         description: 'Ram media gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 9,
@@ -62,6 +70,7 @@ export const PRODUCTS = [
         name: 'Memoria Ram 3',
         description: 'Ram baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 10,
@@ -69,6 +78,7 @@ export const PRODUCTS = [
         name: 'Mother 1',
         description: 'Mother baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 11,
@@ -76,6 +86,7 @@ export const PRODUCTS = [
         name: 'Mother 2',
         description: 'Mother baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 12,
@@ -83,6 +94,7 @@ export const PRODUCTS = [
         name: 'Mother 3',
         description: 'Mother baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 13,
@@ -90,6 +102,7 @@ export const PRODUCTS = [
         name: 'Cooler 1',
         description: 'Mother baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
 
     {   
@@ -98,6 +111,7 @@ export const PRODUCTS = [
         name: 'Cooler 2',
         description: 'Mother baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
     {   
         id: 15,
@@ -105,6 +119,7 @@ export const PRODUCTS = [
         name: 'Cooler 3',
         description: 'Mother baja gama',
         price: 20000,
+        image: '../../../assets/images/FacturaDDL.jpg'
     },
 
 
