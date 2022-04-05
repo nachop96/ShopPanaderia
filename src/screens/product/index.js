@@ -1,12 +1,16 @@
 import { Button, Image, ScrollView, Text, View } from 'react-native';
+import { connect, useDispatch, useSelector } from 'react-redux';
 
 import React from 'react';
 import { styles } from './styles';
 
 const Product = ({ navigation,route }) => {
+    
 
-    const { product } = route.params;
-    const {name,description,price,image} = product;
+    const product = useSelector(state => state.products.selectedProduct);
+
+    
+    const {name,description,price} = product;
 
     return (
         <ScrollView style={styles.container}>
@@ -31,4 +35,4 @@ const Product = ({ navigation,route }) => {
 }
 
 
-export default Product;
+export default connect()(Product);
