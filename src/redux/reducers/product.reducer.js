@@ -1,4 +1,4 @@
-import {PRODUCTS} from '../../constants/products';
+import { PRODUCTS } from '../../constants/products';
 import { productTypes } from '../types/product.types';
 
 const { SELECT_PRODUCT,FILTERED_PRODUCTS} = productTypes;
@@ -9,7 +9,7 @@ const initialState = {
     selectedProduct: null,
 };
 
-const  categoryReducer = (state = initialState, action) => {
+const  productReducer = (state = initialState, action) => {
     switch (action.type) {
         case SELECT_PRODUCT:
             return {    
@@ -26,4 +26,4 @@ const  categoryReducer = (state = initialState, action) => {
     }
 };
 
-export default categoryReducer;
+export default productReducer;

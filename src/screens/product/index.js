@@ -6,7 +6,7 @@ import { styles } from './styles';
 
 const Product = ({ navigation,route }) => {
     
-
+    
     const product = useSelector(state => state.products.selectedProduct);
 
     
