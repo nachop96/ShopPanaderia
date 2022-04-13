@@ -31,11 +31,7 @@ const Product = ({ navigation,route }) => {
                     navigation.navigate('Home') 
                 } color={colors.secondary} />
             </View>
-            <View style ={styles.buttonCart}>
-                <Button title="Ir al carrito" onPress={() => 
-                    navigation.navigate('Cart') 
-                } color={colors.secondary} />
-            </View>
+            
 
             </View>
 
