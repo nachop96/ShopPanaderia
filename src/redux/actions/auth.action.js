@@ -42,7 +42,7 @@ export const signin = (email, password) => {
 
         const result = await response.json();
 
-        console.warn(result);
+        // console.warn(result);
 
         dispatch({
             type: SIGNIN,
