@@ -12,7 +12,7 @@ const MainNavigator = () => {
 
     return (
         <TabStack.Navigator 
-        initialRouteName="Shop"
+        initialRouteName="ShopStack"
         screenOptions={{
             headerShown: false,
         }}
