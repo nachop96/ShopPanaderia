@@ -2,13 +2,16 @@ import { Button, Image, ScrollView, Text, View } from 'react-native';
 import { connect, useDispatch, useSelector } from 'react-redux';
 
 import React from 'react';
+import { addItem } from '../../redux/actions/cart.action';
+import { colors } from '../../constants/themes';
 import { styles } from './styles';
 
 const Product = ({ navigation,route }) => {
     
-    
+    const dispatch = useDispatch();
     const product = useSelector(state => state.products.selectedProduct);
 
+    const addToCart = () => dispatch(addItem(product));
     
     const {name,description,price} = product;
 
@@ -21,9 +24,18 @@ const Product = ({ navigation,route }) => {
             <Text style={styles.text}>AR$ {price}</Text>
 
             <View style ={styles.buttonContainer}>
-            <Button title="Ir al Inicio" onPress={() => {
-                navigation.navigate('Home')
-            }} /></View>
+                <Button title="Agregar al carrito" onPress={() => addToCart()} color={colors.primary}/>
+            </View>
+            <View style ={styles.buttonContainer}>
+                <Button title="Volver al Inicio" onPress={() => 
+                    navigation.navigate('Home') 
+                } color={colors.secondary} />
+            </View>
+            <View style ={styles.buttonCart}>
+                <Button title="Ir al carrito" onPress={() => 
+                    navigation.navigate('Cart') 
+                } color={colors.secondary} />
+            </View>
 
             </View>
 

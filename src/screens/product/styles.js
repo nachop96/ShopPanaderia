@@ -28,9 +28,14 @@ export const styles = StyleSheet.create({
         fontSize: 16,
     },
     buttonContainer: {
-        marginVertical: 20,
-    }
 
+        width: '80%',
+        marginVertical: 10,
+    },
+
+    buttonCart: {
+        marginVertical:50,
+    }
 
 })
 

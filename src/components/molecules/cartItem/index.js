@@ -1,10 +1,10 @@
-import {Button, Text, View} from 'react-native';
+import { Button, Text, View } from "react-native";
 
-import React from 'react';
-import { colors } from '../../../constants/themes';
-import { styles } from './styles';
+import React from "react";
+import { colors } from "../../../constants/themes";
+import { styles } from "./styles";
 
-const CartItem = ({item,onDelete}) => {
+const CartItem = ({ item, onDelete }) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -12,13 +12,13 @@ const CartItem = ({item,onDelete}) => {
             </View>
             <View style={styles.details}>
                 <View>
-                    <Text style={styles.quantity}>cantidad: {item.quantity}</Text>
+                    <Text style={styles.quantity}>Cantidad: {item.quantity}</Text>
                 </View>
                 <View>
                     <Text style={styles.price}>${item.price}</Text>
                 </View>
                 <View>
-                    <Button title="Borrar" onPress={() => onDelete(item.id)} color={colors.primaryColor} />
+                    <Button title="Borrar" onPress={() => onDelete(item.id)} color={colors.primary} />
                 </View>
             </View>
         </View>

@@ -1,3 +1,4 @@
+import Cart from "../screens/cart";
 import Category from "../screens/category";
 import Home from "../screens/home";
 import {Platform} from 'react-native';
@@ -38,6 +39,11 @@ const MainNavigator = () => {
             component={Category} 
             options={({ route }) => ({ title: route.params.name })}
             />
+            <Stack.Screen name="Cart" 
+            component={Cart} 
+            
+            />
+
         </Stack.Navigator>
     );
 }
