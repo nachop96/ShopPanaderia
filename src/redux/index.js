@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
     categories: categoryReducer,
     products: productReducer,
     cart: cartReducer,
-    auth: authReducer
+    auth: authReducer,
 });
 
 export default createStore(rootReducer, applyMiddleware(thunk));

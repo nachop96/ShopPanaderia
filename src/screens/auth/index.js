@@ -1,13 +1,11 @@
 import {Button, KeyboardAvoidingView, Text, TouchableOpacity, View} from 'react-native';
 import React, {useRef, useState} from 'react';
-import { signin, signup } from '../../redux/actions/auth.acion';
+import { signin, signup } from '../../redux/actions/auth.action';
 
 import Input from '../../components/atoms/input/index';
 import { colors } from '../../constants/themes';
 import {styles} from './style';
 import { useDispatch } from 'react-redux';
-
-const dispatch = useDispatch();
 
 const Auth = () => {
     const [email, setEmail] = useState('');
@@ -16,6 +14,7 @@ const Auth = () => {
     const [isLogin, setIsLogin] = useState(true);
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
+    const dispatch = useDispatch();
 
     const onChangeInput = (value, type) => {
         if(type === 'email') {
@@ -27,18 +26,19 @@ const Auth = () => {
 
         if(emailInputRef.current.state.validate && passwordInputRef.current.state.validate) {
             setIsNotValid(false);
-         } else {
-             setIsNotValid(true);
-         }
+        } else {
+            setIsNotValid(true);
+        }
+    }
+         
+         
 
-        const handleAuth = () => {
-            if (isLogin){
-                dispatch(signin(email, password));
-            } else {
-                dispatch(signup(email, password));
-            }   
-
-
+        
+    const handleAuth = () => {
+        if(isLogin) {
+            dispatch(signin(email, password));
+        } else {
+            dispatch(signup(email, password));
         }
     }
     
@@ -86,7 +86,7 @@ const Auth = () => {
                     <Text style={styles.linkText}>{isLogin ? '¿No tienes una cuenta? Registrate' : '¿Ya tienes una cuenta? Inicia Sesion'}</Text>
                     
                 </TouchableOpacity>
-                <Button title={isLogin ? 'Ingresar' : 'Registrar'} onPress={() => handleAuth()} disabled={isNotValid} color={colors.primary}  />
+                <Button title={ isLogin ? 'Ingresar' : 'Registrar'} onPress={() => handleAuth()} disabled={isNotValid} color={colors.primary} />
             </View>
         </KeyboardAvoidingView>
     );

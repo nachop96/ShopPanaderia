@@ -3,12 +3,14 @@ import React, {useState} from 'react';
 import AuthNavigator from './auth';
 import MainNavigator from './main';
 import { NavigationContainer } from '@react-navigation/native';
+import { useSelector } from 'react-redux';
 
 const AppNavigation = () => {
-    const [user, setUser] = useState(null);
+    const isAuth = useSelector(state => state.auth.userId);
+    
     return (
         <NavigationContainer>
-            {user ? <MainNavigator /> : <AuthNavigator />}
+            {isAuth ? <MainNavigator /> : <AuthNavigator />}
             
         </NavigationContainer>
     );
